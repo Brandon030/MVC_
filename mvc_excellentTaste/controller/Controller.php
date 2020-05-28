@@ -6,7 +6,7 @@ class Controller{
 	
 	public function __construct() {
 		$this->klantenLogic = new klantenLogic();
-		$this->reserveringsLogic = new reserveringsLogic();
+		$this->reserveringsLogic = new reserveringsLogic();   
 
 	}
 
