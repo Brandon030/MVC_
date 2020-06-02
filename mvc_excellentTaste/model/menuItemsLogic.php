@@ -59,5 +59,21 @@ class menuItemsLogic{
         $sql = 'DELETE FROM menuitems WHERE menuItemCode = "'.$menuItemCode.'"';
         $results = $this->DataHandler->deleteData($sql);
     }   
+
+    public function test(){
+        $sql = "SELECT * FROM `test`";
+        $menuItem = $this->DataHandler->readsData($sql); 
+        return $menuItem;
+    }
+
+    public function updatePlus3($nummer){
+        $sql = "UPDATE `test` SET `nummer`= (nummer + 1) WHERE nummer = '".$nummer."'";
+        $this->DataHandler->updateData($sql);
+    }
+
+    public function updateMin3($nummer){
+        $sql = "UPDATE `test` SET `nummer`= (nummer - 1) WHERE nummer = '".$nummer."'";
+        $this->DataHandler->updateData($sql);
+    }
     
 }

@@ -99,6 +99,16 @@ class Controller{
 				$this->deleteMenuItem($_REQUEST['menuItemCode']);
 				break;
 
+				case 'test':
+				$this->testpagina();
+				break;
+				case 'updatePlus':
+				$this->updatePlus2($_REQUEST['nummer']);
+				break;
+				case 'updateMin':
+				$this->updateMin2($_REQUEST['nummer']);
+				break;
+
 				default:
 				$this->collectHome();
 				break;
@@ -279,6 +289,21 @@ class Controller{
 			return header("Location: ?op=readsMenuItems");
 		}
 	// eind \\
+
+		public function testpagina(){
+			$result = $this->menuItemsLogic->test();
+			include 'view/test.php';
+		}
+
+		public function updatePlus2($nummer){
+			$this->menuItemsLogic->updatePlus3($nummer);
+			return header("Location: ?op=test");
+		}
+
+		public function updateMin2($nummer){
+			$this->menuItemsLogic->updateMin3($nummer);
+			return header("Location: ?op=test");
+		}
 
 		public function __destruct(){
 
