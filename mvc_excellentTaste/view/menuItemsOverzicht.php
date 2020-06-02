@@ -1,15 +1,14 @@
 <?php include 'assests/header.php'; ?>
 
-<div style="width: 50%;">
+<div style="width: 50%; margin: auto;">
 	<table class="table table-striped" style="text-align:center;">
-		<a href="?op=collectCreateMenuItem">
-			<button>Drank aanmaken</button>
-		</a>
 		<thead>
 			<th scope="col">MenuItemCode:</th>
 			<th scope="col">Drank naam:</th>
 			<th scope="col">prijs:</th>
 			<th scope="col">subGerechtCode:</th>
+			<th scope="col"></th>
+			<th scope="col"><a href="?op=collectCreateMenuItem"><h4>+</h4></a></th>
 		</thead>
 
 		<?php foreach ($menuItem as $r) {
@@ -20,7 +19,7 @@
 			<td>".$r['prijs']."</td>
 			<td>".$r['subGerechtCode']."</td>
 			<td><a href='?op=readMenuItem&menuItemCode=".$r['menuItemCode']."'>aanpassen</a></td>
-			<td><a href='?op=deleteMenuItem&menuItemCode=".$r['menuItemCode']."'>Verwijderen</a></td><br>
+			<td><a href='?op=deleteMenuItem&menuItemCode=".$r['menuItemCode']."'>Verwijderen</a></td>
 			</tr>";
 		} ?>
 	</table>

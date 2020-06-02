@@ -10,11 +10,12 @@
 </head>
 <body>
 
-  <nav class="navbar-vertical navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="?op=">Excellent Taste</a>
-    <button class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="?op=">Excellent Taste</a>
+  </nav>
+
+  <nav class="navbar-vertical navbar-expand-lg navbar-light bg-light" style="width: 20%; padding-bottom: 30%; float: left;">
+
     <div class="navbar-vertical">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -32,16 +33,17 @@
     </div>
 
     <div class="navbar-vertical">
-      <ul class="navbar-nav"> 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Overzichten
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">KokOverzicht</a>
-            <a class="dropdown-item" href="#">BarmanOverzicht</a>
-            <!-- <div class="dropdown-divider"></div> -->
-          </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="?op=readsMenuDranken">Chef Overzicht</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-vertical">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="?op=readsMenuDranken">Barman Overzicht</a>
         </li>
       </ul>
     </div>
@@ -50,6 +52,14 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="?op=readsMenuDranken">Dranken</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-vertical">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="?op=readsMenuDranken">Eten</a>
         </li>
       </ul>
     </div>

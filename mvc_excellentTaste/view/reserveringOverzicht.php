@@ -1,10 +1,8 @@
 <?php include 'assests/header.php'; ?>
 
-<div style="width: 50%;">
+<div class="container" style="width: 50%;">
 	<table class="table table-striped" style="text-align:center;">
-		<a href="?op=collectCreateReservering">
-			<button>Reservering aanmaken</button>
-		</a>
+		
 		<thead>
 			<th scope="col">reservering_id:</th>
 			<th scope="col">Klantnaam:</th>
@@ -15,6 +13,9 @@
 			<th scope="col">aantal kinderen:</th>
 			<th scope="col">status:</th>
 			<th scope="col">klant_id:</th>
+			<th scope="col"></th>
+			<th scope="col"></th>
+			<th><a href="?op=collectCreateReservering"><h4>+</h4></th>
 		</thead>
 
 		<?php foreach ($results as $r) {
