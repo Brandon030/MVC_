@@ -8,7 +8,7 @@
 	var naamJa = document.getElementById("ja");
 	var naamNee = document.getElementById("nee");
 	
-	if(neemJa.checked === true){
+	if(naamJa.checked === true){
 		
 	}
 </script>>

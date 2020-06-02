@@ -8,7 +8,7 @@ class reserveringsLogic {
 	}
 
 	public function createReservering(){
-		if (isset($_POST['formSubmit'])) {
+		if (isset($_POST['reserveringFormSubmit'])) {
 			$Klantnamen = $_POST['naam'];
 			$tafel = $_POST['tafel'];
 			$datum = $_POST['datum'];

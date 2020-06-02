@@ -1,5 +1,6 @@
 <?php
 require_once 'model/DataHandler.php';
+require_once 'model/reserveringsLogic.php';
 
 class klantenLogic {
 	/*
@@ -18,13 +19,22 @@ class klantenLogic {
 		verstuurt de $sql naar de functie createData in DataHandler
 	*/
 	public function createKlanten(){		
-		if (isset($_POST['formSubmit'])) {
+		if (isset($_POST['klantenFormSubmit'])) {
 			$Klantnamen = $_POST['naam'];
 			$Telefoon = $_POST['telnr'];
 			$Email = $_POST['Email'];
 			$status = $_POST['BOOLEAN'];
 
 			$sql = "INSERT INTO `klanten`(`Klant_id`, `Klantnamen`, `Telefoon`, `Email`, `status`) VALUES ('','".$Klantnamen."', '".$Telefoon."', '".$Email."', '".$status."');";
+			$this->DataHandler->createData($sql);
+		}
+	}
+
+	public function readsCreatedKlantNaam(){
+		if (isset($_POST['reserveringsFormSubmit'])) {
+			$Klantnamen = $_POST['naam'];
+
+			$sql = "INSERT INTO `klanten`(`Klant_id`, `Klantnamen`, `Telefoon`, `Email`, `status`) VALUES ('','".$Klantnamen."','','','');";
 			$this->DataHandler->createData($sql);
 		}
 	}

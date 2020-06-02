@@ -22,6 +22,7 @@
 			echo "<tr>
 			<td>".$r['reservering_id'] ."</td>
 			<td>".$r['Klantnamen'] ."</td>
+			<td><a href='?op=readsBestellingen&reservering_id=".$r['reservering_id']."'><span style='border: 4px dotted;'>".$r['tafel']."</span></a></td>
 			<td>".$r['tafel'] ."</td>
 			<td>".$r['datum'] ."</td>
 			<td>".$r['tijd']."</td>

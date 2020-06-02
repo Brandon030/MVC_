@@ -2,7 +2,17 @@
 
 <body>
 	<form action="" method="POST">
-		<label for="klantnaam">Klant:</label>
+		<label for="klantnaam">Bestaande klant:</label>
+		<select name="klantnaam">
+			<?php
+				echo "<option></option>";
+			foreach ($klant as $k) {
+				echo "<option value='".$k['Klantnamen']."'>".$k['Klantnamen']."</option>";
+			}
+			echo "</select><br>";
+		?>
+
+		<label for="klantnaam">Nieuwe klant:</label>
 		<input type="text" class="form-control" name="klantnaam" ><br>
 
 		<label for="tafel">tafel:</label>
@@ -23,7 +33,7 @@
 		<label for="BOOLEAN">status:</label>
 		<input type="BOOLEAN" class="form-control" name="BOOLEAN"><br>
 
-		<input type="submit" name="formSubmit" value="verzenden">
+		<input type="submit" name="reserveringFormSubmit" value="verzenden">
 		<a href="?op=readsReserveringen">
 			<input type="button" value="terug" style="color: black;">
 		</a>

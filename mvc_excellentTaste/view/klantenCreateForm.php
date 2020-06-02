@@ -14,7 +14,7 @@
 		<label for="BOOLEAN">Status:</label>
 		<input type="BOOLEAN" class="form-control" name="BOOLEAN"><br>	
 
-		<input type="submit" name="formSubmit" value="Opslaan">
+		<input type="submit" name="klantenFormSubmit" value="Opslaan">
 		<a href="?op=readsKlanten">
 			<input type="button" value="terug" style="color: black;">
 		</a>
