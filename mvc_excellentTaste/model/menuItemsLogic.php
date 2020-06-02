@@ -66,6 +66,11 @@ class menuItemsLogic{
         return $menuItem;
     }
 
+
+    /*
+        voert de functie update uit met $sql
+
+    */
     public function updatePlus3($nummer){
         $sql = "UPDATE `test` SET `nummer`= (nummer + 1) WHERE nummer = '".$nummer."'";
         $this->DataHandler->updateData($sql);

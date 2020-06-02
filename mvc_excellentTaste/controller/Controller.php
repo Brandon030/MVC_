@@ -295,6 +295,10 @@ class Controller{
 			include 'view/test.php';
 		}
 
+
+		/*
+			voert de method updatePlus3 uit met de parameter $nummer
+		*/
 		public function updatePlus2($nummer){
 			$this->menuItemsLogic->updatePlus3($nummer);
 			return header("Location: ?op=test");
